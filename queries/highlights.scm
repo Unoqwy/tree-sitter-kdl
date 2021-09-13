@@ -1,3 +1,4 @@
+(comment) @comment
 (single_line_comment) @comment
 
 (node

@@ -11,6 +11,10 @@
             "name": "node"
           },
           {
+            "type": "SYMBOL",
+            "name": "comment"
+          },
+          {
             "type": "PATTERN",
             "value": "\\r?\\n"
           }
@@ -117,6 +121,10 @@
               {
                 "type": "SYMBOL",
                 "name": "node"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "comment"
               },
               {
                 "type": "PATTERN",

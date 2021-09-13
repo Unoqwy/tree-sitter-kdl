@@ -7,7 +7,7 @@ module.exports = grammar({
   name: "kdl",
 
   rules: {
-    document: $ => repeat(choice($.node, eol)),
+    document: $ => repeat(choice($.node, $.comment, eol)),
 
     node: $ => seq(
       optional($.node_comment_prefix), // TODO: make this actually comment the whole thing
@@ -20,7 +20,7 @@ module.exports = grammar({
     node_block: $ => seq(
       optional($.node_comment_prefix),
       "{",
-      repeat(choice($.node, eol)),
+      repeat(choice($.node, $.comment, eol)),
       "}"
     ),
     node_comment_prefix: _ => "/-",
