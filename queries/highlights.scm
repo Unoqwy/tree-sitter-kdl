@@ -2,7 +2,8 @@
 
 (node
     name: (identifier) @function)
-(prop) @property
+(prop (identifier) @property)
+(type) @type
 
 (keyword) @keyword
 

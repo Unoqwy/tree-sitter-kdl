@@ -10,7 +10,7 @@ module.exports = grammar({
     document: $ => repeat(choice($.node, eol)),
 
     node: $ => seq(
-      optional($.node_comment_prefix), // make this actually comment the whole thing
+      optional($.node_comment_prefix), // TODO: make this actually comment the whole thing
       optional($.type),
       field("name", $.identifier),
       repeat(choice($.prop, $.value)),
